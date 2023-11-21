@@ -1,0 +1,25 @@
+/* RESET CSS */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SEZIONE ID */
+
+/* SEZIONE TAG */
+
+
+/* SEZIONE CLASSI */
+
+.card{
+    width: 25%;
+    min-width: 300px;
+    margin: 10px;
+    display: flex;
+    box-shadow: 7px 7px 5px rgb(216, 216, 215);
+}
+
+
+
