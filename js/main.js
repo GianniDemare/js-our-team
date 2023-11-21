@@ -15,43 +15,37 @@ Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 let ourTeam = [
     {
-        name: "Wayne",
-        surname: "Barnett",
+        nameSurname: "Wayne Barnett",
         role: "Founder & CEO",
         photo: "./img/wayne-barnett-founder-ceo.jpg" 
     },
 
     {
-        name: "Angela",
-        surname: "Caroll",
+        nameSurname: "Angela Caroll",
         role: "Chief Editor",
         photo: "./img/angela-caroll-chief-editor.jpg"
     },
 
     {
-        name: "Walter",
-        surname: "Gordon",
+        nameSurname: "Walter Gordon",
         role: "Office Manager",
         photo: "./img/walter-gordon-office-manager.jpg"
     },
 
     {
-        name: "Angela",
-        surname: "Lopez",
+        nameSurname: "Angela Lopez",
         role: "Social Media Manager",
         photo: "./img/angela-lopez-social-media-manager.jpg"
     },
 
     {
-        name: "Scott",
-        surname: "Estrada",
+        nameSurname: "Scott Estrada",
         role: "Developer",
         photo: "./img/scott-estrada-developer.jpg"
     },
 
     {
-        name: "Barbara",
-        surname: "Ramos",
+        nameSurname: "Barbara Ramos",
         role: "Graphic Designer",
         photo: "./img/barbara-ramos-graphic-designer.jpg"
     }
@@ -60,12 +54,11 @@ let ourTeam = [
 
 console.log(ourTeam);
 
-let card = document.getElementById("cards");
+
 
 
 for (let i = 0; i < ourTeam.length; i++) {
-    console.log("Nome:", ourTeam[i].name);
-    console.log("Cognome:", ourTeam[i].surname);
+    console.log("Nome:", ourTeam[i].nameSurname);
     console.log("Ruolo:", ourTeam[i].role);
     console.log("Foto:", ourTeam[i].photo);
     console.log("");
@@ -74,6 +67,20 @@ for (let i = 0; i < ourTeam.length; i++) {
 }
 
 
+for (let i = 0; i < ourTeam.length; i++) {
+
+document.getElementById("cards").innerHTML += `
+
+    <div class="card col-3 m-3">
+        <img src="${ourTeam[i].photo}" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-text">${ourTeam[i].nameSurname}</h5>
+            <p>${ourTeam[i].role}</p>
+        </div>
+    </div>
+
+`
+}
 
 
 
